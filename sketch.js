@@ -28,13 +28,12 @@ function drawMountain() {
 
 function drawWind() {
     push();
-    translate(-120, 0);
-    rotate(- PI / 12);
+    translate(300, 0);
     noStroke();
-    rect(0, 0, 140, height + 100);
+    noFill();
     stroke(strokeColor);
-    for (let i = 0; i < 15; i++) {
-        line(i * 10, 0, i * 10, height + 100);
+    for (let i = 0; i < 18; i++) {
+        arc(0, 0, 800 - (i * 20), 1150 - (i * 20), HALF_PI, PI);
     }
     pop();
 }
