@@ -1,8 +1,12 @@
-const strokeColor = 51;
+const bgColor = 0;
+const strokeColor = 255;
 const borderDiff = 10;
 
 function setup() {
     createCanvas(640, 400);
+    background(bgColor);
+    fill(bgColor);
+    stroke(strokeColor)
 
     drawMountain();
     drawEvening();
@@ -19,7 +23,7 @@ function drawMountain() {
     rotate((2 * PI) / 5);
     noStroke();
     rect(0, 0, 110, height + 100);
-    stroke(51);
+    stroke(strokeColor);
     for (let i = 0; i < 11; i++) {
         line(i * 10, 0, i * 10, height + 100);
     }
